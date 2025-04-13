@@ -1,0 +1,29 @@
+print("ماشین حساب ساده پایتون (جمع و تفریق)")
+print("برای استفاده:")
+print("- برای جمع: عدد + عدد را وارد کنید (مثال: 5+3)")
+print("- برای تفریق: عدد - عدد را وارد کنید (مثال: 10-4)")
+print("- برای خروج: exit را وارد کنید")
+print("------------------------------")
+
+while True:
+    user_input = input("عملیات مورد نظر را وارد کنید: ")
+    
+    if user_input.lower() == 'exit':
+        print("خروج از ماشین حساب...")
+        break
+    
+    try:
+        if '+' in user_input:
+            num1, num2 = user_input.split('+')
+            result = float(num1) + float(num2)
+            print(f"نتیجه: {result}")
+        elif '-' in user_input:
+            num1, num2 = user_input.split('-')
+            result = float(num1) - float(num2)
+            print(f"نتیجه: {result}")
+        else:
+            print("فرمت اشتباه! لطفاً مانند نمونه‌ها وارد کنید.")
+    except:
+        print("خطا! لطفاً فقط عدد وارد کنید.")
+    
+    print("------------------------------")
